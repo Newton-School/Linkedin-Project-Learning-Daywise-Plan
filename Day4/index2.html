@@ -1,10 +1,20 @@
 
-<!-- Step 6 - Introducing span, child selctor and float -->
+<!-- Step 2 - Starting left side bottom, styling recent div, introducing font awesome -->
 <head>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+        body{
+            background: rgb(235, 235, 235);
+        }
         .profile {
-            border: 2px solid black;
+            background: white;
             width: 250px;
             font-family:  'Poppins', sans-serif;
             border-radius: 20px;
@@ -88,6 +98,29 @@
             color: blue;
             float: right;
         }
+
+
+        .groups-and-recent{
+            background: white;
+            width: 220px;
+            padding: 15px;
+            font-family:  'Poppins', sans-serif;
+            border-radius: 20px;
+            margin-top: 10px;
+        }
+
+        .recent h5{
+            font-size: 12px;
+        }
+
+        .recent h4{
+            font-size: 10px;
+            color: grey;
+        }
+
+        .recent i {
+            color: rgb(83, 83, 83);
+        }
      </style>
 </head>
 <body>
@@ -95,6 +128,7 @@
         <div class="profile-header">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxUXYmbcwcoIYKhXgzZut6BPn_7FsIi1VL5A&usqp=CAU" alt="" />
         </div>
+
         <div class="profile-body">
             <div class="profile-info">
                 <h1>Apoorv Singh</h1>
@@ -113,6 +147,29 @@
             <hr />
             <div class="profile-items">
                 <p>My items</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="groups-and-recent">
+        <div class="recent">
+            <h5>Recent</h5>
+            <div>
+                <i class="fa-solid fa-users"></i>
+                <h4>Web Designer, HTML & CSS...</h4>
+            </div>
+            <div>
+                <i class="fa-solid fa-users"></i>
+                <h4>The Flexbox Jobs...</h4>
+            </div>
+            <div>
+                <i class="fa-solid fa-users"></i>
+                <h4>Front End Developer Group</h4>
+            </div>
+            <div>
+                <i class="fa-solid fa-users"></i>
+                <h4>UI Developer / Front End...</h4>
             </div>
         </div>
     </div>
