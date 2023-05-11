@@ -1,0 +1,329 @@
+
+<!-- Step 3 - Adding content to linkedin news  -->
+<head>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+        body{
+            background: rgb(235, 235, 235);
+            padding: 0px 65px;
+            display: grid;
+            grid-template-columns: 250px 700px 350px;
+        }
+
+        .sidebar{
+            width: fit-content;
+        }
+        .profile {
+            background: white;
+            width: 250px;
+            font-family:  'Poppins', sans-serif;
+            border-radius: 20px;
+        }
+        .profile h1 {
+            font-size: 23px;
+        }
+        .profile p {
+            font-size: 15px;
+        }
+
+        .profile-header{
+            background-color: rgb(82, 92, 105);
+            text-align: center;
+            border-radius: 18px 18px 0px 0px;
+            background-image: url("https://marketplace.canva.com/EAE2cQaUHVA/1/0/1600w/canva-black-minimal-motivation-quote-linkedin-banner-HoRi-2buBWk.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+
+        .profile-header img {
+            border-radius: 50%;
+            height: 4.5rem;
+            position: relative;
+            top: 25px;
+        }
+
+        .profile-body p{
+            color: grey;
+        }
+
+        .profile-info {
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        .profile-info h1 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .profile-info p{
+            font-size: 14px;
+            margin-top: 0;
+            color: grey;
+        }
+
+        .profile-stats {
+            padding: 5px;
+        }
+
+        .profile-stats p{
+            margin: 10px 0;
+            font-size: 12px;
+        }
+
+        hr {
+            margin: 0;
+        }
+
+        .profile-premium{
+            padding: 5px;
+        }
+
+        .profile-premium p{
+            font-size: 12px;
+            margin: 10px 0;
+        }
+
+        .profile-premium h4{
+            font-size: 15px;
+            margin: 10px 0;
+        }  
+
+        .profile-items {
+            padding: 5px;
+        }
+
+        .profile-items p {
+            font-size: 12px;
+        }
+
+        .metric span{
+            color: blue;
+            float: right;
+        }
+
+        .sidebar-bottom{
+            background: white;
+            width: 250px;
+            font-family:  'Poppins', sans-serif;
+            border-radius: 20px;
+            margin-top: 10px;
+        }
+
+        .groups-and-recent {
+            padding: 15px;
+        }
+
+    
+        .groups-and-recent > div h5{
+            font-size: 12px;
+            margin: 9px 0px;
+        }
+
+        .groups-and-recent > div h4{
+            font-size: 10px;
+            color: grey;
+            margin: 5px;
+        }
+
+        .groups-and-recent > div i{
+            color: rgb(83, 83, 83);
+            font-size: 0.8rem;
+        }
+
+        .icon-container{
+            display: flex;
+            align-items: center;
+            margin-top: 0.7rem;
+            gap: 0.5rem;
+            margin: 0;
+        }
+
+        #group-text{
+            font-size: 13px;
+            color: #0a66c2;
+            margin-top: 25px;
+        }
+
+        .show-more {
+            color: grey;
+            font-size: 11px;
+            margin: 0px 15px;
+        }
+
+        .events {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 15px;
+        }
+
+        .events p{
+            margin: 0;
+            font-size: 12px;
+        }
+
+        .events i{
+            color: rgb(83, 83, 83);
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .discover {
+            font-size: 15px;
+            text-align: center;
+            color: gray;
+            padding-bottom: 20px;
+        }
+
+        .posts {
+            background-color: white;
+            height: 300px;
+            margin: 0px 20px
+        }
+
+        .news {
+            background-color: white;
+            height: 400px;
+            font-family:  'Poppins', sans-serif;
+            padding: 13px;
+            border-radius: 20px;
+        }
+
+        .news ul{
+            padding-left: 20px;
+        }
+
+        .news-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-header h4{
+            margin: 10px 0px 15px 0px;
+        }
+
+     </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="profile">
+            <div class="profile-header">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxUXYmbcwcoIYKhXgzZut6BPn_7FsIi1VL5A&usqp=CAU" alt="" />
+            </div>
+    
+            <div class="profile-body">
+                <div class="profile-info">
+                    <h1>Apoorv Singh</h1>
+                    <p>Full Stack Developer</p>
+                </div>
+                <hr />
+                <div class="profile-stats">
+                    <p class="metric">Who viewed your profile <span>42</span></p>
+                    <p class="metric">View of your post <span>64</span></p>
+                </div>
+                <hr />
+                <div class="profile-premium">
+                    <p>Access exclusive tools & insights</p>
+                    <h4>Try Premium for free</h4>
+                </div>
+                <hr />
+                <div class="profile-items">
+                    <p>My items</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="sidebar-bottom">
+            <div class="groups-and-recent">
+                <div>
+                    <h5>Recent</h5>
+                    <div class="icon-container">
+                        <i class="fa-solid fa-users"></i>
+                        <h4>Web Designer, HTML & CSS...</h4>
+                    </div>
+                    <div class="icon-container">
+                        <i class="fa-solid fa-users"></i>
+                        <h4>The Flexbox Jobs...</h4>
+                    </div>
+                    <div class="icon-container">
+                        <i class="fa-solid fa-users"></i>
+                        <h4>Front End Developer Group</h4>
+                    </div>
+                    <div class="icon-container">
+                        <i class="fa-solid fa-users"></i>
+                        <h4>UI Developer / Front End...</h4>
+                    </div>
+                </div>
+        
+                <div>
+                    <h5 id="group-text">Group</h5>
+                    <div class="icon-container">
+                        <i class="fa-solid fa-users"></i>
+                        <h4>Web Designer, HTML & CSS...</h4>
+                    </div>
+                    <div class="icon-container">
+                        <i class="fa-solid fa-users"></i>
+                        <h4>The Flexbox Jobs...</h4>
+                    </div>
+                    <div class="icon-container">
+                        <i class="fa-solid fa-users"></i>
+                        <h4>Front End Developer Group</h4>
+                    </div>
+                    <div class="icon-container">
+                        <i class="fa-solid fa-users"></i>
+                        <h4>UI Developer / Front End...</h4>
+                    </div>
+                </div>
+            </div>    
+    
+            <div class="show-more">
+                Show more <i class="fa-solid fa-angle-down"></i>
+            </div>
+    
+            <div class="events">
+                <p>Events</p>
+                <i class="fa-solid fa-plus"></i>
+            </div>
+    
+            <hr />
+    
+            <div class="discover">
+                <h3>Discover More</h3>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="posts">
+
+    </div>
+
+    <div class="news">
+        <div class="news-header">
+            <h4>Linkedin News</h4>
+            <i class="fa-solid fa-circle-info"></i>
+        </div>
+        <div>
+            <div>
+                <h4>The latest in startup world<h4>
+                <p>1d ago</p>
+            </div>
+            <div>
+                <h4>Biden visits US troops in Poland<h4>
+                <p>2d ago</p>
+            </div>
+            <div>
+                <h4>What Indian customers are spending on<h4>
+                <p>4d ago</p>
+            </div>
+        </div>
+    </div>
+</body>
