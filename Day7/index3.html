@@ -1,5 +1,5 @@
 
-<!-- Step 1 - Adding container cards for posts and news sections. Introduce grid to layout the cards   -->
+<!-- Step 3 - Creating and styling posts input -->
 <head>
     <link
         rel="stylesheet"
@@ -15,6 +15,7 @@
             padding: 0px 65px;
             display: grid;
             grid-template-columns: 250px 700px 350px;
+            font-family:  'Poppins', sans-serif;
         }
 
         .sidebar{
@@ -25,7 +26,8 @@
             width: 250px;
             font-family:  'Poppins', sans-serif;
             border-radius: 20px;
-        }
+            box-shadow: 1px 1px grey;
+        } 
         .profile h1 {
             font-size: 23px;
         }
@@ -115,6 +117,7 @@
             font-family:  'Poppins', sans-serif;
             border-radius: 20px;
             margin-top: 10px;
+            box-shadow: 1px 1px grey;
         }
 
         .groups-and-recent {
@@ -156,12 +159,18 @@
             color: grey;
             font-size: 11px;
             margin: 0px 15px;
+            cursor: pointer;
+        }
+
+        .show-more:hover{
+            text-decoration: underline;
         }
 
         .events {
             display: flex;
             justify-content: space-between;
             margin: 20px 15px;
+            cursor: pointer;
         }
 
         .events p{
@@ -180,17 +189,111 @@
             text-align: center;
             color: gray;
             padding-bottom: 20px;
+            cursor: pointer;
         }
 
         .posts {
             background-color: white;
             height: 300px;
-            margin: 0px 20px
+            margin: 0px 20px;
+            box-shadow: 1px 1px grey;
+            padding: 15px;     
+            border-radius: 15px;
         }
+
+        .posts-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+        }
+
+        .posts-header i{
+            cursor: pointer;
+        }
+         
+        .next-event{
+            padding: 15px;
+        }
+
+        .post-creation {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 0px 10px;
+            /* Code change begins here */
+            margin-top: 25px;
+        }
+        .post-creation img{
+            height: 3.5rem;
+            width: 3.5rem;
+            border-radius: 50%;
+        }
+        .post-creation input{
+            padding: 16px 15px;
+            border-radius: 100px;
+            width: 100%;
+        }
+         /* Code change ends here */
+         
+        .btn{
+            background-color: #0a66c2;
+            padding: 10px 15px;
+            width: fit-content;
+            border-radius: 100px;
+            color: white;
+            cursor: pointer;
+            border: none;
+            font-family:  'Poppins', sans-serif;
+        }
+
+        .btn:hover{
+            background-color: #0a5197;
+        }
+       
 
         .news {
             background-color: white;
             height: 400px;
+            font-family:  'Poppins', sans-serif;
+            padding: 13px;
+            border-radius: 20px;
+            box-shadow: 1px 1px grey;
+        }
+
+        .news ul{
+            padding-left: 20px;
+        }
+
+        .news-header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .news-header h4{
+            margin: 10px 0px 15px 0px;
+        }
+
+        .news-link {
+            margin: 15px 0px;
+            cursor: pointer;
+        }
+        .news-link h4{
+            font-size: 14px;
+            margin: 0;
+        }
+        .news-link p{
+            font-size: 10px;
+            margin: 2px;
+            color: grey;
+        }
+        .news li:hover{
+            background-color: rgb(227, 227, 227);
+        }
+
+        .news .show-more{
+            font-size: 15px;
         }
      </style>
 </head>
@@ -285,10 +388,67 @@
     
 
     <div class="posts">
+        <div class="posts-header">
+            <h2>Upcoming event from LinkedIn</h2>
+            <i class="fa-solid fa-xmark"></i> 
+        </div>
 
+        <div class="next-event">
+            <h4>Join the next Career Talks virtual event to learn effective strategies for re-entering the workforce after taking a break</h4>
+            <button class="btn">
+                Learn more
+            </button>
+        </div>
+
+        <div class="post-creation">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxUXYmbcwcoIYKhXgzZut6BPn_7FsIi1VL5A&usqp=CAU"></img>
+            <input placeholder="Start a post"></input>
+        </div>
     </div>
 
     <div class="news">
-        
+        <div class="news-header">
+            <h4>Linkedin News</h4>
+            <i class="fa-solid fa-circle-info"></i>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <div class="news-link">
+                        <h4>The latest in startup world<h4>
+                        <p>1d ago</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="news-link">
+                        <h4>Biden visits US troops in Poland<h4>
+                        <p>2d ago</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="news-link">
+                        <h4>What Indian customers are spending on<h4>
+                        <p>4d ago</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="news-link">
+                        <h4>Create your own career luck<h4>
+                        <p>5d ago</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="news-link">
+                        <h4>Preparing for virtual interviews<h4>
+                        <p>5d ago</p>
+                    </div>
+                </li>
+            </ul>  
+        </div>
+
+        <div class="show-more">
+            Show more <i class="fa-solid fa-angle-down"></i>
+        </div>
+
     </div>
 </body>
