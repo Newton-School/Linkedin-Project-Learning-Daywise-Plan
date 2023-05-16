@@ -1,4 +1,4 @@
-<!-- Step 5 - Introduce header and main tags. Modify styles of body and main-->
+<!-- Step 1 - Create and style the input box in nav. Introduce nav and focus property-->
 <head>
     <link
         rel="stylesheet"
@@ -9,9 +9,84 @@
     />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-        /* Code changes starts here  */
         body{
             margin: 0;
+        }
+        header{
+            padding: 10px 10%;
+        }
+        header i{
+            font-size: 40px;
+            color:#0a66c2;
+        }
+        /* Code change starts here */
+        nav{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            font-family:  'Poppins', sans-serif;
+        }
+        .nav-right{
+            display: flex;
+            gap: 2rem;
+        }
+        .nav-right a{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.3rem;
+            color: grey;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .nav-right a:hover i,
+        .nav-right a:hover h5 {
+            color: black;
+         }
+        .nav-right h5{
+            margin: 0;
+            text-align: center;
+            font-size: 12px;
+        }
+        .nav-right i{
+            font-size: 1rem;
+            color: grey;
+        }
+        .nav-right p{
+            font-size: 10px;
+            text-align: center;
+            vertical-align: middle;
+            margin: auto 0;
+            cursor: pointer;
+        }
+        /* Code change ends here */
+        .nav-left{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .nav-left .input-box{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            background-color: rgb(237, 245, 246);
+            width: 250px;
+            border-radius: 5px;
+            padding: 10px 15px;
+        }
+        .input-box input{
+            font-size: 14px;            
+            border: none;
+            background-color: rgb(237, 245, 246);
+            width: 100%;
+            color: black;
+        }
+        .input-box input:focus{
+            outline: none;
+        }
+        .input-box i{
+            font-size: 0.8rem;
+            color: grey;
         }
         main{
             background: rgb(235, 235, 235);
@@ -20,8 +95,6 @@
             grid-template-columns: 250px 700px 350px;
             font-family:  'Poppins', sans-serif;
         }
-        /* Code changes ends here  */
-
         .sidebar{
             width: fit-content;
         }
@@ -251,7 +324,6 @@
         .btn:hover{
             background-color: #0a5197;
         }
-
         .post-type{
             margin-top: 10px;
             display: flex;
@@ -281,7 +353,6 @@
         .type:nth-child(4) i{
             color: #c20ab9;
         }
-  
         .news {
             background-color: white;
             height: 400px;
@@ -329,7 +400,54 @@
 </head>
 <body>
     <header>
-        <i class="fa-brands fa-linkedin"></i>
+        <nav>
+            <div class="nav-left">
+                <i class="fa-brands fa-linkedin"></i>
+                <div class="input-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input placeholder="Search for Job, Skills and Companies"/>
+                </div>
+            </div>
+
+            <div class="nav-right">
+                <a href="/">
+                    <i class="fa-solid fa-house"></i>
+                    <h5>Home</h5>
+                </a>
+        
+                <a href="/">
+                    <i class="fa-solid fa-user-group"></i>
+                    <h5>My Network</h5>
+                </a>
+
+                <a href="/">
+                    <i class="fa-solid fa-suitcase"></i>
+                    <h5>Jobs</h5>
+                </a>
+
+                <a href="/">
+                    <i class="fa-solid fa-message"></i>
+                    <h5>Messaging</h5>
+                </a>
+
+                <a href="/">
+                    <i class="fa-solid fa-bell"></i>
+                    <h5>Notifications</h5>
+                </a>
+
+                <a href="/">
+                    <i class="fa-solid fa-user"></i>
+                    <h5>Me</h5>
+                </a>
+
+                <a href="/"> 
+                    <i class="fa-solid fa-braille"></i>
+                    <h5>Work</h5>
+                </a>
+
+                <p>Try Premium for <br/> Free</p>
+            </div>
+        </nav>
     </header>
     <main>
         <div class="sidebar">
