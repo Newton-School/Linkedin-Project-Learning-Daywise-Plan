@@ -1,4 +1,4 @@
-<!-- Step 2 - Adding post with form link-->
+<!-- Step 1 - CSS Animations-->
 <head>
     <link
         rel="stylesheet"
@@ -11,6 +11,9 @@
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
         body{
             margin: 0;
+            width: fit-content;
+            margin: auto;
+            background: rgb(235, 235, 235);
         }
         header{
             box-sizing: border-box;
@@ -20,16 +23,19 @@
             z-index: 10;
             background: white;
             width: 100%;
+            max-width: 1500px;
         }
         header i{
             font-size: 40px;
             color:#0a66c2;
+            
         }
         nav{
             display: flex;
             justify-content: space-between;
             width: 100%;
             font-family:  'Poppins', sans-serif;
+        
         }
         .nav-right{
             display: flex;
@@ -463,6 +469,122 @@
         .news .show-more{
             font-size: 15px;
         }
+
+        .chat-container {
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+            z-index: 9999;
+            overflow: visible;
+            cursor: pointer;
+        }
+
+        .chat-box {
+            width: 300px;
+            border-radius: 8px;
+            background-color: #f3f6f8;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
+            animation: slideDown 0.3s ease-out forwards;
+            transform-origin: bottom right;
+            overflow: hidden;
+            position: relative;
+            top: 220px;
+        }
+
+        .chat-container:hover .chat-box {
+             animation: slideUp 0.3s ease-out forwards;
+        }
+
+        @keyframes slideUp {
+            0% {
+                transform: translateY(0%);
+            }
+            100% {
+                transform: translateY(-90%);
+            }
+        }
+
+        @keyframes slideDown {
+            0% {
+                transform: translateY(10%);
+            }
+            100% {
+                transform: translateY(-10%);
+            }
+        }
+
+        .chat-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        background-color: #0073b1;
+        color: #ffffff;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        }
+
+        .chat-header h3 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 600;
+        }
+
+        .close-button {
+        border: none;
+        background-color: transparent;
+        font-size: 20px;
+        font-weight: bold;
+        color: #ffffff;
+        cursor: pointer;
+        }
+
+        
+
+        .chat-card {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 10px;
+        border-bottom: 1px solid #e1e5e8;
+        }
+
+        .profile-image {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        }
+
+        .chat-content {
+        margin-left: 10px;
+        flex-grow: 1;
+        }
+
+        .sender-name {
+        margin: 0;
+        font-size: 14px;
+        font-weight: bold;
+        color: #000000;
+        }
+
+        .chat-message {
+        margin: 0;
+        font-size: 14px;
+        color: #000000;
+        text-overflow: ellipsis;
+        width: 200px;
+        white-space: nowrap;
+        overflow: hidden;
+        }
+
+        .chat-time {
+        margin: 0;
+        font-size: 12px;
+        color: #999999;
+        text-align: right;
+        }
+
      </style>
 </head>
 <body>
@@ -813,5 +935,39 @@
                 Show more <i class="fa-solid fa-angle-down"></i>
             </div>
         </div>
+        <div class="chat-container">
+            <div class="chat-box">
+              <div class="chat-header">
+                <h3>Messages</h3>
+                <button class="close-button">×</button>
+              </div>
+              <div class="chat-list">
+                <div class="chat-card">
+                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBkl9nu5Z5plHw7F8U3ytSs_7aw5aEAEQbAg&usqp=CAU" class="profile-image">
+                  <div class="chat-content">
+                    <h4 class="sender-name">John Doe</h4> 
+                    <p class="chat-message">Hey, I heard about your latest project on Blockchain!</p>
+                    <p class="chat-time">10:30 AM</p>
+                  </div>
+                </div>
+                <div class="chat-card">
+                  <img src="https://e1.pxfuel.com/desktop-wallpaper/903/679/desktop-wallpaper-97-aesthetic-best-profile-pic-for-instagram-for-boy-instagram-dp-boys.jpg" class="profile-image">
+                  <div class="chat-content">
+                    <h4 class="sender-name">Jane Smith</h4>
+                    <p class="chat-message">Great! How about you?</p>
+                    <p class="chat-time">10:32 AM</p>
+                  </div>
+                </div>
+                <div class="chat-card">
+                  <img src="https://img.freepik.com/premium-photo/silhouette-man-blue-crystal-sky_23-2148282565.jpg?w=360" class="profile-image">
+                  <div class="chat-content">
+                    <h4 class="sender-name">Alex Williams</h4>
+                    <p class="chat-message">Thanks for connecting.</p>
+                    <p class="chat-time">11:52 AM</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
     </main>
 </body>
