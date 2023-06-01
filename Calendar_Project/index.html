@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .calendar {
+      display: grid;
+      grid-template-rows: auto auto 1fr;
+      height: 100vh;
+      gap: 10px;
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      text-align: center;
+    }
+
+    .weekdays {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      font-weight: bold;
+      color: #555555;
+    }
+
+    .weekday {
+      padding: 10px;
+      text-align: center;
+      background-color: #f2f2f2;
+    }
+
+    .days {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .day {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: calc((100% / 7) - 29px);
+      padding: 10px;
+      text-align: center;
+      background-color: #e8e8e8;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .current-day {
+      background-color: #ff8c5e;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    .empty-day {
+      background-color: #ffffff;
+    }
+
+    .holiday{
+        background-color: #ffdd56; /* Replace with your desired background color */
+    }
+  </style>
+</head>
+<body>
+  <div class="calendar">
+    <div class="header">
+      <h1>June 2023</h1>
+    </div>
+    <div class="weekdays">
+      <div class="weekday holiday">Sun</div>
+      <div class="weekday">Mon</div>
+      <div class="weekday">Tue</div>
+      <div class="weekday">Wed</div>
+      <div class="weekday">Thu</div>
+      <div class="weekday">Fri</div>
+      <div class="weekday">Sat</div>
+    </div>
+    <div class="days">
+      <div class="day empty-day"></div>
+      <div class="day empty-day"></div>
+      <div class="day empty-day"></div>
+      <div class="day empty-day"></div>
+      <div class="day">1</div>
+      <div class="day">2</div>
+      <div class="day current-day">3</div>
+      <div class="day holiday">4</div>
+      <div class="day">5</div>
+      <div class="day">6</div>
+      <div class="day">7</div>
+      <div class="day">8</div>
+      <div class="day">9</div>
+      <div class="day">10</div>
+      <div class="day holiday">11</div>
+      <div class="day">12</div>
+      <div class="day">13</div>
+      <div class="day">14</div>
+      <div class="day">15</div>
+      <div class="day">16</div>
+      <div class="day">17</div>
+      <div class="day holiday">18</div>
+      <div class="day">19</div>
+      <div class="day">20</div>
+      <div class="day">21</div>
+      <div class="day">22</div>
+      <div class="day">23</div>
+      <div class="day">24</div>
+      <div class="day holiday">25</div>
+      <div class="day">26</div>
+      <div class="day">27</div>
+      <div class="day">28</div>
+      <div class="day">29</div>
+      <div class="day">30</div>
+    </div>
+  </div>
+</body>
+</html>
